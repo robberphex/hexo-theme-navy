@@ -1,11 +1,11 @@
 menu:
-  docs: Docs
-  api: API
-  news: News
-  plugins: Plugins
-  themes: Themes
-  about: About
-  search: Search
+  docs: Docsx
+  api: APIx
+  news: Newsx
+  plugins: Pluginsx
+  themes: Themesx
+  about: Aboutx
+  search: Searchx
 
 index:
   get_started: Get started
@@ -22,19 +22,19 @@ page:
 
 sidebar:
   docs:
-    getting_started: Getting Started
-    overview: Overview
-    setup: Setup
-    configuration: Configuration
-    commands: Commands
-    migration: Migration
-    basic_usage: Basic Usage
-    writing: Writing
-    front_matter: Front-matter
-    tag_plugins: Tag Plugins
-    asset_folders: Asset Folders
-    data_files: Data Files
-    server: Server
+    getting_started: Getting Startedx
+    overview: Overviewx
+    setup: Setupx
+    configuration: Configurationx
+    commands: Commandsx
+    migration: Migrationx
+    basic_usage: Basic Usagexx
+    writing: Writingx
+    front_matter: Front-matterx
+    tag_plugins: Tag Pluginsx
+    asset_folders: Asset Foldersx
+    data_files: Data Filesx
+    server: Serverx
     generating: Generating
     deployment: Deployment
     github_pages: GitHub Pages
