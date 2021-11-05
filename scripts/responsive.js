@@ -87,4 +87,4 @@ async function responsive() {
   }));
 }
 
-hexo.extend.filter.register('after_generate', responsive);
+//hexo.extend.filter.register('after_generate', responsive);

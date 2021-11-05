@@ -70,7 +70,7 @@ hexo.extend.helper.register('header_menu', function(className) {
   const lang = this.page.lang;
   const isEnglish = lang === 'en';
 
-  for (const [title, path] of Object.entries(menu)) {
+  for (const [title, path] of Object.entries(menu??{})) {
     let langPath = path;
     if (!isEnglish && ~localizedPath.indexOf(title)) langPath = lang + path;
 
@@ -163,8 +163,8 @@ hexo.extend.helper.register('canonical_path_for_nav', function() {
 });
 
 hexo.extend.helper.register('lang_name', function(lang) {
-  const data = this.site.data.languages[lang];
-  return data.name || data;
+  const data = this.site.data.languages?.[lang];
+  return data?.name || data;
 });
 
 hexo.extend.helper.register('disqus_lang', function() {
