@@ -63,18 +63,23 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   return result;
 });
 
-hexo.extend.helper.register('header_menu', function(className) {
+hexo.extend.helper.register('header_menu', function (className) {
   const menu = this.site.data.menu;
   let result = '';
   const self = this;
   const lang = this.page.lang;
-  const isEnglish = lang === 'en';
 
-  for (const [title, path] of Object.entries(menu??{})) {
-    let langPath = path;
-    if (!isEnglish && ~localizedPath.indexOf(title)) langPath = lang + path;
+  for (const [title, path] of Object.entries(menu ?? {})) {
+    let realPath = path;
+    let langPath = lang + path;
+    for (const page of this.site.pages.toArray()) {
+      if (page.path === langPath || page.path == `${langPath}index.html`) {
+        realPath = langPath;
+        break;
+      }
+    }
 
-    result += `<a href="${self.url_for(langPath)}" class="${className}-link">${self.__('menu.' + title)}</a>`;
+    result += `<a href="${self.url_for(realPath)}" class="${className}-link">${self.__('menu.' + title)}</a>`;
   }
 
   return result;
