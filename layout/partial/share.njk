@@ -1,16 +1,16 @@
-{% if site.data.project.github %}
+{% if config.github %}
 <!-- GitHub star -->
-<a href="https://github.com/{{site.data.project.github}}" target="_blank" aria-label="Star {{site.data.project.github}} on GitHub"><img src="https://img.shields.io/github/stars/{{site.data.project.github}}?style=social" alt="Star"></a>
+<a href="https://github.com/{{config.github}}" target="_blank" aria-label="Star {{config.github}} on GitHub"><img src="https://img.shields.io/github/stars/{{config.github}}?style=social" alt="Star"></a>
 <!-- GitHub fork -->
-<a href="https://github.com/{{site.data.project.github}}" target="_blank" aria-label="Fork {{site.data.project.github}} on GitHub"><img src="https://img.shields.io/github/forks/{{site.data.project.github}}?style=social" alt="Fork"></a>
+<a href="https://github.com/{{config.github}}" target="_blank" aria-label="Fork {{config.github}} on GitHub"><img src="https://img.shields.io/github/forks/{{config.github}}?style=social" alt="Fork"></a>
 {% endif %}
 
-{% if site.data.project.npm %}
+{% if config.npm %}
 <!-- NPM Download -->
-<a href="https://www.npmjs.com/package/{{site.data.project.npm}}" target="_blank" aria-label="{{site.data.project.name}} on NPM"><img src ="https://img.shields.io/npm/dm/{{site.data.project.npm}}?logo=npm&style=social" alt="NPM Downloads"></a>
+<a href="https://www.npmjs.com/package/{{config.npm}}" target="_blank" aria-label="{{config.name}} on NPM"><img src ="https://img.shields.io/npm/dm/{{config.npm}}?logo=npm&style=social" alt="NPM Downloads"></a>
 {% endif %}
 
-{% if site.data.project.twitter %}
+{% if config.twitter %}
 <!-- Twitter follow button -->
-<a href="https://twitter.com/{{site.data.project.twitter}}" target="_blank" aria-label="Follow {{site.data.project.twitter_name}} on Twiitter"><img src="https://img.shields.io/twitter/follow/{{site.data.project.twitter}}?style=social" alt="Follow @{{site.data.project.twitter}}"></a>
+<a href="https://twitter.com/{{config.twitter}}" target="_blank" aria-label="Follow {{config.twitter_name}} on Twiitter"><img src="https://img.shields.io/twitter/follow/{{config.twitter}}?style=social" alt="Follow @{{config.twitter}}"></a>
 {% endif %}
